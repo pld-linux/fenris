@@ -10,6 +10,7 @@ Source0:	http://razor.bindview.com/tools/fenris/%{name}.tgz
 URL:		http://razor.bindview.com/tools/fenris/
 BuildRequires:	binutils-static
 BuildRequires:	gdb
+BuildRequires:	kernel-source
 BuildRequires:	openssl-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
