@@ -7,8 +7,8 @@ License:	GPL
 Group:		Development/Debuggers
 Vendor:		Michal Zalewski <lcamtuf@bos.bindview.com>
 Source0:	http://razor.bindview.com/tools/fenris/%{name}.tgz
-Patch0:		http://mops.uci.agh.edu.pl/~gotar/%{name}-build_with_sh.patch
-Patch1:		http://mops.uci.agh.edu.pl/~gotar/%{name}-ncurses.patch
+Patch0:		%{name}-build_with_sh.patch
+Patch1:		%{name}-ncurses.patch
 URL:		http://razor.bindview.com/tools/fenris/
 BuildRequires:	awk
 BuildRequires:	binutils-static
