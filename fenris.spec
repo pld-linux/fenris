@@ -61,14 +61,12 @@ install ragsplit $RPM_BUILD_ROOT%{_bindir}
 install spliter.pl $RPM_BUILD_ROOT%{_bindir}
 install doc/man/* $RPM_BUILD_ROOT%{_mandir}/man1
 
-gzip -9nf doc/{ChangeLog,README,TODO,reverse.txt}
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc doc/*.gz html/{razor,*html,*.jpg}
+%doc doc/{ChangeLog,README,TODO,reverse.txt} html/{razor,*html,*.jpg}
 %config %verify(not md5 size mtime) %{_sysconfdir}/*
 %attr(755,root,root) %{_bindir}/*
 %{_mandir}/man1/*
