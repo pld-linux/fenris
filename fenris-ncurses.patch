@@ -1,0 +1,36 @@
+diff -urN fenris.orig/build fenris/build
+--- fenris.orig/build	Thu May 30 10:04:54 2002
++++ fenris/build	Thu May 30 10:16:26 2002
+@@ -727,7 +727,7 @@
+ 
+ echo -n "[+] libncurses installed: "
+ 
+-if [ -f /usr/include/curses.h -o -f /usr/local/include/curses.h ]; then
++if [ -f /usr/include/ncurses/curses.h -o -f /usr/local/include/ncurses/curses.h ]; then
+   if [ -f /lib/libncurses.so -o -f /usr/lib/libncurses.so -o -f /usr/local/lib/libncurses.so -o -f /lib/libncurses.a -o -f /usr/lib/libncurses.a -o -f /usr/local/lib/libncurses.a ]; then
+     echo "yes, nc-aegir will be built."
+     NCAEGIR=yes
+diff -urN fenris.orig/libdisasm/opcodes2/nc-opdis.c fenris/libdisasm/opcodes2/nc-opdis.c
+--- fenris.orig/libdisasm/opcodes2/nc-opdis.c	Thu May 30 06:05:55 2002
++++ fenris/libdisasm/opcodes2/nc-opdis.c	Thu May 30 10:14:35 2002
+@@ -30,7 +30,7 @@
+ */
+ 
+ #include <stdarg.h>
+-#include <ncurses.h>
++#include <ncurses/ncurses.h>
+ #include "dis-asm.h"
+ 
+ unsigned int base_addr;
+diff -urN fenris.orig/nc-aegir.c fenris/nc-aegir.c
+--- fenris.orig/nc-aegir.c	Thu May 30 06:27:04 2002
++++ fenris/nc-aegir.c	Thu May 30 10:13:02 2002
+@@ -38,7 +38,7 @@
+ #include <sys/ptrace.h>
+ #include <sys/user.h>
+ #include <errno.h>
+-#include <ncurses.h>
++#include <ncurses/ncurses.h>
+ #include <stdlib.h>
+ #include <ctype.h>
+ 
