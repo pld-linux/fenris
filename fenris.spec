@@ -41,7 +41,7 @@ je¶li ¼ród³a s± zbyt z³o¿one b±d¼ zbyt ¼le napisane, aby je rzetelnie
 analizowaæ w rozs±dnym czasie.
 
 %prep
-%setup  -q
+%setup  -q -n %{name}
 
 %build
 %{__make} all
