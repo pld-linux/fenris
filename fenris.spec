@@ -1,8 +1,8 @@
 Summary:	Program execution path analysis tool
 Summary(pl):	Narzêdzie do ¶ledzenia wykonywania programu
 Name:		fenris
-Version:	0.01b
-Release:	0.1
+Version:	0.01b_2332
+Release:	1
 License:	GPL
 Group:		Development/Debuggers
 Vendor:		Michal Zalewski <lcamtuf@bos.bindview.com>
@@ -42,10 +42,10 @@ je¶li ¼ród³a s± zbyt z³o¿one b±d¼ zbyt ¼le napisane, aby je rzetelnie
 analizowaæ w rozs±dnym czasie.
 
 %prep
-%setup  -q -n %{name}
+%setup -q -n %{name}
 
 %build
-%{__make} all
+./build strip
 
 %install
 rm -rf $RPM_BUILD_ROOT
@@ -57,16 +57,18 @@ install fenris-bug $RPM_BUILD_ROOT%{_bindir}
 install fprints $RPM_BUILD_ROOT%{_bindir}
 install getfprints $RPM_BUILD_ROOT%{_bindir}
 install ragnarok $RPM_BUILD_ROOT%{_bindir}
+install ragsplit $RPM_BUILD_ROOT%{_bindir}
+install spliter.pl $RPM_BUILD_ROOT%{_bindir}
 install doc/man/* $RPM_BUILD_ROOT%{_mandir}/man1
 
-gzip -9nf doc/{ChangeLog,README,TODO,{announce,propaganda}.txt}
+gzip -9nf doc/{ChangeLog,README,TODO,reverse.txt}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc doc/*.gz
+%doc doc/*.gz html/{razor,*html,*.jpg}
 %config %verify(not md5 size mtime) %{_sysconfdir}/*
 %attr(755,root,root) %{_bindir}/*
 %{_mandir}/man1/*
