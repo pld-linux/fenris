@@ -6,6 +6,7 @@ Release:	1
 License:	GPL
 Group:		Development/Debuggers
 Source0:	http://razor.bindview.com/tools/fenris/%{name}.tgz
+# Source0-md5:	14c1fe47e00fd5fc1f7e72f12c056334
 Patch0:		%{name}-build_with_sh.patch
 Patch1:		%{name}-ncurses.patch
 URL:		http://razor.bindview.com/tools/fenris/
