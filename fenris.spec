@@ -19,7 +19,6 @@ BuildRequires:	kernel-source
 BuildRequires:	ncurses-devel
 BuildRequires:	openssl-devel >= 0.9.7d
 BuildRequires:	readline-devel
-BuildRequires:	sed
 BuildRequires:	screen
 BuildRequires:	sh-utils
 BuildRequires:	textutils
