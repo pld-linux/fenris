@@ -1,12 +1,12 @@
 Summary:	Program execution path analysis tool
 Summary(pl):	Narzêdzie do ¶ledzenia wykonywania programu
 Name:		fenris
-Version:	0.01b_3091
+Version:	0.07
 Release:	1
 License:	GPL
 Group:		Development/Debuggers
 Vendor:		Michal Zalewski <lcamtuf@bos.bindview.com>
-Source0:	http://mops.uci.agh.edu.pl/~gotar/%{name}-%{version}.tar.bz2
+Source0:	http://razor.bindview.com/tools/fenris/%{name}.tgz
 Patch0:		http://mops.uci.agh.edu.pl/~gotar/%{name}-build_with_sh.patch
 Patch1:		http://mops.uci.agh.edu.pl/~gotar/%{name}-ncurses.patch
 URL:		http://razor.bindview.com/tools/fenris/
