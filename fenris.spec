@@ -49,7 +49,7 @@ pamiêci, I/O, wyra¿eñ regularnych i wielu innych. Jako ¿e nie wymaga
 kodu ¼ród³owego czy jakiej¶ wyró¿nionej metody kompilacji, projekt ten
 mo¿e byæ bardzo pomocny przy testach i wykonaniach 'czarnych skrzynek'
 - ale bêdzie równie¿ dobrym narzêdziem do kontroli projektów Open
-Source, jako niezrównane narzêdzie rekonesanu real-time - szczególnie
+Source, jako niezrównane narzêdzie rekonesansu real-time - szczególnie
 je¶li ¼ród³a s± zbyt z³o¿one b±d¼ zbyt ¼le napisane, aby je rzetelnie
 analizowaæ w rozs±dnym czasie.
 
