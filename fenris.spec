@@ -1,17 +1,29 @@
 Summary:	Program execution path analysis tool
 Summary(pl):	Narzêdzie do ¶ledzenia wykonywania programu
 Name:		fenris
-Version:	0.01b_2332
+Version:	0.01b_3091
 Release:	1
 License:	GPL
 Group:		Development/Debuggers
 Vendor:		Michal Zalewski <lcamtuf@bos.bindview.com>
 Source0:	http://razor.bindview.com/tools/fenris/%{name}.tgz
+Patch0:		%{name}-build_with_sh.patch
+Patch1:		%{name}-ncurses.patch
 URL:		http://razor.bindview.com/tools/fenris/
+BuildRequires:	awk
 BuildRequires:	binutils-static
+BuildRequires:	fileutils
 BuildRequires:	gdb
+BuildRequires:	grep
 BuildRequires:	kernel-source
+BuildRequires:	ncurses-devel
 BuildRequires:	openssl-devel
+BuildRequires:	readline-devel
+BuildRequires:	sed
+BuildRequires:	screen
+BuildRequires:	sh-utils
+BuildRequires:	textutils
+BuildRequires:	tar
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -43,6 +55,8 @@ analizowaæ w rozs±dnym czasie.
 
 %prep
 %setup -q -n %{name}
+%patch0 -p1
+%patch1 -p1
 
 %build
 ./build strip
@@ -52,10 +66,13 @@ rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_sysconfdir},%{_bindir},%{_mandir}/man1}
 
 install fnprints.dat $RPM_BUILD_ROOT%{_sysconfdir}
+install aegir $RPM_BUILD_ROOT%{_bindir}
+install dress $RPM_BUILD_ROOT%{_bindir}
 install fenris $RPM_BUILD_ROOT%{_bindir}
 install fenris-bug $RPM_BUILD_ROOT%{_bindir}
 install fprints $RPM_BUILD_ROOT%{_bindir}
 install getfprints $RPM_BUILD_ROOT%{_bindir}
+install nc-aegir $RPM_BUILD_ROOT%{_bindir}
 install ragnarok $RPM_BUILD_ROOT%{_bindir}
 install ragsplit $RPM_BUILD_ROOT%{_bindir}
 install spliter.pl $RPM_BUILD_ROOT%{_bindir}
@@ -66,7 +83,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc doc/{ChangeLog,README,TODO,reverse.txt} html/{razor,*html,*.jpg}
+%doc doc/{ChangeLog,README,TODO,{anti-fenris,be,debug-api,other,reverse}.txt} html/{razor,samples,*html,*.jpg}
 %config %verify(not md5 size mtime) %{_sysconfdir}/*
 %attr(755,root,root) %{_bindir}/*
 %{_mandir}/man1/*
