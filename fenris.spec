@@ -17,7 +17,7 @@ BuildRequires:	gdb
 BuildRequires:	grep
 BuildRequires:	kernel-source
 BuildRequires:	ncurses-devel
-BuildRequires:	openssl-devel >= 0.9.7
+BuildRequires:	openssl-devel >= 0.9.7c
 BuildRequires:	readline-devel
 BuildRequires:	sed
 BuildRequires:	screen
