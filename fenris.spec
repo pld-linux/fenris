@@ -21,8 +21,8 @@ BuildRequires:	openssl-devel >= 0.9.7d
 BuildRequires:	readline-devel
 BuildRequires:	screen
 BuildRequires:	sh-utils
-BuildRequires:	textutils
 BuildRequires:	tar
+BuildRequires:	textutils
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -83,6 +83,6 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc doc/{ChangeLog,README,TODO,{anti-fenris,be,debug-api,other,reverse}.txt} html/{razor,samples,*html,*.jpg}
-%config %verify(not md5 size mtime) %{_sysconfdir}/*
+%config %verify(not md5 mtime size) %{_sysconfdir}/*
 %attr(755,root,root) %{_bindir}/*
 %{_mandir}/man1/*
