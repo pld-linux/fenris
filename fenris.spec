@@ -1,5 +1,5 @@
 Summary:	Program execution path analysis tool
-Summary(pl):	Narzêdzie do ¶ledzenia wykonywania programu
+Summary(pl.UTF-8):   NarzÄ™dzie do Å›ledzenia wykonywania programu
 Name:		fenris
 Version:	0.07
 Release:	1
@@ -38,19 +38,19 @@ unmatched real-time reconnaissance tool - especially when sources are
 too complex or too badly written to be analyzed in a reliable way and
 reasonable time.
 
-%description -l pl
-Fenris jest uniwersalnym tracerem, analizatorem i po czê¶ci
-dekompilatorem, maj±cym na celu uproszczenie wy³apywania b³êdów,
-kontroli bezpieczeñstwa, analizy kodu, algorytmu czy protoko³u -
-- dostarczaj±c strukturalnego ¶ledzenia programu, ogólnych informacji
-na temat wewnêtrznych konstrukcji, ¶cie¿ek wywo³ania, operacji na
-pamiêci, I/O, wyra¿eñ regularnych i wielu innych. Jako ¿e nie wymaga
-kodu ¼ród³owego czy jakiej¶ wyró¿nionej metody kompilacji, projekt ten
-mo¿e byæ bardzo pomocny przy testach i wykonaniach 'czarnych skrzynek'
-- ale bêdzie równie¿ dobrym narzêdziem do kontroli projektów Open
-Source, jako niezrównane narzêdzie rekonesansu real-time - szczególnie
-je¶li ¼ród³a s± zbyt z³o¿one b±d¼ zbyt ¼le napisane, aby je rzetelnie
-analizowaæ w rozs±dnym czasie.
+%description -l pl.UTF-8
+Fenris jest uniwersalnym tracerem, analizatorem i po czÄ™Å›ci
+dekompilatorem, majÄ…cym na celu uproszczenie wyÅ‚apywania bÅ‚Ä™dÃ³w,
+kontroli bezpieczeÅ„stwa, analizy kodu, algorytmu czy protokoÅ‚u -
+- dostarczajÄ…c strukturalnego Å›ledzenia programu, ogÃ³lnych informacji
+na temat wewnÄ™trznych konstrukcji, Å›cieÅ¼ek wywoÅ‚ania, operacji na
+pamiÄ™ci, I/O, wyraÅ¼eÅ„ regularnych i wielu innych. Jako Å¼e nie wymaga
+kodu ÅºrÃ³dÅ‚owego czy jakiejÅ› wyrÃ³Å¼nionej metody kompilacji, projekt ten
+moÅ¼e byÄ‡ bardzo pomocny przy testach i wykonaniach 'czarnych skrzynek'
+- ale bÄ™dzie rÃ³wnieÅ¼ dobrym narzÄ™dziem do kontroli projektÃ³w Open
+Source, jako niezrÃ³wnane narzÄ™dzie rekonesansu real-time - szczegÃ³lnie
+jeÅ›li ÅºrÃ³dÅ‚a sÄ… zbyt zÅ‚oÅ¼one bÄ…dÅº zbyt Åºle napisane, aby je rzetelnie
+analizowaÄ‡ w rozsÄ…dnym czasie.
 
 %prep
 %setup -q -n %{name}
