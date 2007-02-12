@@ -1,5 +1,5 @@
 Summary:	Program execution path analysis tool
-Summary(pl.UTF-8):   Narzędzie do śledzenia wykonywania programu
+Summary(pl.UTF-8):	Narzędzie do śledzenia wykonywania programu
 Name:		fenris
 Version:	0.07
 Release:	1
